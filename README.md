@@ -12,7 +12,7 @@ echo "number: $#"; echo "all   : $@"
 
 ### If-Else Prompt
 ```bash
-#!/bin/basha
+#!/bin/bash
 if [ "$#" = "0" ]; then
    read -p "What is your name? " name
 else
