@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # function to remove spaces
 function removeSpace(){
     space=" "
@@ -27,12 +26,8 @@ function removeSpace(){
     fi
 }
 
-#function stripAdditionalSpaces(){
-    
-#}
-
 if [ $# -eq 0 ]; then
-    echo "You Suck";
+    echo "Nice job";
     return -1;
 else
     for input; do
@@ -44,7 +39,6 @@ else
 	    removeSpace "$input" $input;
 	else
 	    echo "Source $input does not exist, skipping";
-	    #return 127;
 	fi;
     done
 fi

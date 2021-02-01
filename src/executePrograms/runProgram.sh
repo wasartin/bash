@@ -39,7 +39,6 @@ if [[ $(isExtensionIncluded $INPUT_FILE; echo $?) -eq 0 ]]; then
 fi
 
 if [[ $(isFileAccessible $INPUT_FILE; echo $?) -eq 0 ]]; then
-# if [ -x ${INPUT_FILE}.java ]; then
     echo "File Found - ${INPUT_FILE}.java"
     # optionally watch the result.txt file with "tail -f result.txt"
     while $CONTINUE; do

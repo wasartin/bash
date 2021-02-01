@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# The code that does the majority of the work.
 # echo | head -5 part-r-00000 >> result.txt
 # echo | tail -5 part-r-00000 >> result.txt
 
@@ -15,9 +16,9 @@ function accessFile(){
 		echo "Bottom 5" >> "${TARGET_FILE}"
 		echo | tail -5 "${CURR_FILE}" >> "${TARGET_FILE}"
 		echo " "
-    else 
-		echo "%CURR_FILE not found"
-	fi
+    else
+			echo "%CURR_FILE not found"
+		fi
 }
 
 function displayHelp(){
@@ -31,7 +32,7 @@ if [ $# -eq 0 ]; then
 else
 	if [[ $# -eq 1  ]] && [[ "$1" = "-h" ]]; then
 		displayHelp
-	else 
+	else
 		for input in "$@"; do
 			accessFile $input
 		done

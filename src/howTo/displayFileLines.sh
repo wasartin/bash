@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function otherCheck(){
+function fileCheck(){
     inputFile=$@
     [[ -f "$inputFile" ]] && [[ -f "$inputFile" ]]
 }
@@ -10,7 +10,7 @@ function displayLinesOfFile(){
     while read line; do
 	  echo "$INDEX $line"
 	  INDEX=$[INDEX+1]
-    done	  
+    done
 }
 
 if [ $# -eq 0 ]; then
@@ -18,8 +18,7 @@ if [ $# -eq 0 ]; then
     return -1
 else
     for input; do
-	if [[ $(otherCheck $input; echo $?) -eq 0 ]]; then
-	    #displayLinesOfFile $input
+	if [[ $(fileCheck $input; echo $?) -eq 0 ]]; then
 	    INDEX=1
 	    while read line; do
 		echo "$INDEX $line"
