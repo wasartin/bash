@@ -10,12 +10,11 @@ function fileAccessible(){
 param="i"
 targetFile="/proc/$param/comm"
 
-# helper function for something
+# helper function for accessing file
 function accessFile(){
     N=$1
     fileName="${targetFile//$param/$N}" #replace the param with this Number
     if [[ $(fileAccessible $fileName; echo $?) -eq 0 ]]; then
-#	echo "$fileName Exists."
 	GLOBAL_INDEX=$N;
 	while read line; do
 	    echo "$GLOBAL_INDEX $line"
@@ -24,7 +23,7 @@ function accessFile(){
 }
 
 if [ $# -ne 2 ]; then
-   echo "You Suck"
+   echo "Uh-Oh, looks like you should read the documentation."
    echo "My Processes"
    echo "Usage: mypos <start-index> <stop-index>"
    echo "Displays processes with process ID within an inclusive "
@@ -35,12 +34,9 @@ else
     MIN=$1
     GLOBAL_INDEX=$MIN
     MAX=$2
- #   echo "Min: $MIN, Max: $MAX"
     CURR=$MIN
     while [ $CURR -le $MAX ]; do
-#	echo "Current Num: $CURR"
 	accessFile $CURR
 	CURR=$[CURR+1]
     done
-    
 fi

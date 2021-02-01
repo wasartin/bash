@@ -1,8 +1,8 @@
-# Simple Functionality
+# Simple Functionality Cheat Sheet
 
 # Understanding Args
 
-```bash 
+```bash
 echo "zeroth: $0"; echo "first : $1"
 echo "second: $2"; echo "third : $3"
 echo "number: $#"; echo "all   : $@"
@@ -23,7 +23,7 @@ printf 'Hello, %s!\n' "$name"
 ```
 
 ### Input Reader
-```bash 
+```bash
 #!/bin/bash
 echo Enter names, one per line
 while read first rest; do
@@ -31,7 +31,7 @@ while read first rest; do
 done
 ```
 ### Power script
-```bash 
+```bash
 #/bin/bash
 N=0
 P=1
@@ -52,7 +52,7 @@ else
 fi
 ```
 ### Switches with Opts
-```bash 
+```bash
 #/bin/bash
 #!/bin/bash
 while getopts "habs:" SW; do
