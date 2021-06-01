@@ -13,6 +13,7 @@
 
 ### Understanding Args
 ```bash
+#!/bin/bash
 echo "zeroth: $0"; echo "first : $1"
 echo "second: $2"; echo "third : $3"
 echo "number: $#"; echo "all   : $@"
