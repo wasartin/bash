@@ -72,7 +72,7 @@ done
 #!/bin/bash
 while [ $# -gt 0 ]; do
       echo Hello, $1
-      shift #consume arguments. you are shfting right
+      shift #consume arguments. This shifts right through the args
 done
 ```
 ### Args with For Loop
