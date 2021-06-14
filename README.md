@@ -142,3 +142,15 @@ else
    done
 fi
 ```
+### Understanding Time
+```bash
+#!/bin/bash
+
+#Cool function for timing stuff
+time {
+	/f2c.sh
+	echo "Real:= start to finish"
+	echo "User:= CPU time spent in user-mode (outside the kernel) within the process"
+	echo "Sys:= CPU time spent in the kernel within the process"
+}
+```
