@@ -10,6 +10,7 @@
 - [Power Script](#power-script)
 - [Int Compare](#int-compare)
 - [Fahrenheit to Celsius (Function)](#fahrenheit-to-celsius)
+- [Timing functions](#understanding-time)
 
 ### Understanding Args
 ```bash
