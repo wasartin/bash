@@ -1,5 +1,5 @@
 
-fucntion listAlias(){
+function listAlias(){
     while read line; do
         if [[ "$line" == *"alias"* ]] && [[ "$line" != *"randomString-129"* ]]; then
             printf "$line\n"
